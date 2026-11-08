@@ -1,9 +1,9 @@
 {
   "upcoming": [
     {
-      "title": "Next AFG Conference",
-      "when": "2027",
-      "venue": "Sydney",
+      "title": "Next AFG/SIF Conference",
+      "when": "2028",
+      "venue": "Brisbane, QLD",
       "details": "More information to come.",
       "date": "",
       "link": "",
@@ -133,6 +133,12 @@
           "year": "2016",
           "venue": "Adelaide",
           "chairs": "A/Prof Andrei Kotousov & A/Prof Jun Ma"
+        },
+        {
+          "year": "2025",
+          "venue": "Sydney",
+          "chairs": "Prof Chung Wang & A/Prof Bernd Gludovatz"
+          "url": "http://https://conference.unsw.edu.au/en/sif2025"
         }
       ]
     }
