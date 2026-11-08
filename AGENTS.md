@@ -22,7 +22,7 @@ Sections, in order: **Hero, History, Members, Events, Contact.** Navigation is l
 10. **Events:** the next upcoming event is highlighted at the top of the Events section; past events follow, in two groups (AFG Meetings; SIF Conferences) with columns Year, Venue, Chair(s), Awards; then Proceedings. Upcoming events with a `date` or `endDate` that has passed are hidden automatically.
 11. **Members:** committee roles first, then group members grouped A to Z. Grouping and sorting is done by the page from a flat list, by surname (last word of the name, or the optional `surname` field).
 12. **Contact:** a single person (name, role, organisation, email). The email is inserted by JavaScript to deter spam bots.
-13. **Hosting:** Cloudflare Pages, deployed from GitHub. Build command `node scripts/check-data.mjs`, output directory `site`. A data error must fail the build so the previous version stays live.
+13. **Hosting:** Cloudflare (Workers static assets, deployed from GitHub; Pages also works). `wrangler.jsonc` publishes the `site` folder. Build command `node scripts/check-data.mjs`, deploy command `npx wrangler deploy`. A data error must fail the build so the previous version stays live.
 14. **Accessibility basics:** semantic HTML, skip link, visible focus, sufficient contrast, `aria-expanded` on the menu toggle, reduced-motion respected. No tracking or analytics.
 
 ## Project layout
@@ -34,6 +34,7 @@ site/js/main.js          fetches data/*.json and renders every section
 site/data/*.json         ALL EDITABLE CONTENT (schemas below)
 site/assets/hero.jpg     hero image (cropped from a 842px SEM image)
 scripts/check-data.mjs   validator: plain-English errors, exit code 1 on error
+wrangler.jsonc           Cloudflare config: publish ./site as static assets (name must match the project, "afg")
 docs/DECISIONS.md        why things are the way they are
 docs/original-content/   transcription of the old website's text (reference only)
 README.md                maintainer guide, deployment steps

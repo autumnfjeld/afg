@@ -11,11 +11,11 @@ The people and event lists change over time and are the part most likely to be e
 ## One page with scrolling navigation
 Five short sections do not need separate pages. One page is simpler to build, works well on phones, and each section still has its own link (`/#members`, `/#events`).
 
-## Hosting: Cloudflare Pages from GitHub
-Free for this size, fast, automatic HTTPS, and every saved change on GitHub publishes itself. Edits can be made entirely in GitHub's browser editor, with no software to install.
+## Hosting: Cloudflare from GitHub
+Cloudflare now sets up new static sites as a Worker with static assets (`wrangler.jsonc` points at the `site` folder); the older Pages product works the same way. Free for this size, fast, automatic HTTPS, and every saved change on GitHub publishes itself. Edits can be made entirely in GitHub's browser editor, with no software to install.
 
 ## The data check runs as the build command
-`scripts/check-data.mjs` is Cloudflare's build command. A typo in a JSON file (the most likely mistake) fails the build, so the previous good version stays online instead of a broken page going live. The checker explains the problem in plain English.
+`scripts/check-data.mjs` is Cloudflare's build command (it runs before the deploy command). A typo in a JSON file (the most likely mistake) fails the build, so the previous good version stays online instead of a broken page going live. The checker explains the problem in plain English.
 
 ## Members sorted automatically by surname
 The old website grouped members by hand under letters, and some were under the wrong letter. The new data is a flat list and the page groups and sorts it, so adding a member is a single line anywhere in the list. A `surname` field overrides the default (last word of the name).

@@ -9,29 +9,17 @@ All the words, names and events live in a few simple text files (`.json`). You e
 
 ## Contents
 
-- [Australian Fracture Group website](#australian-fracture-group-website)
-  - [Contents](#contents)
-  - [1. Where things are](#1-where-things-are)
-  - [2. How to edit the content](#2-how-to-edit-the-content)
-    - [Add a group member](#add-a-group-member)
-    - [Remove or change a member](#remove-or-change-a-member)
-    - [Change the committee](#change-the-committee)
-    - [Announce the next event](#announce-the-next-event)
-    - [Add an event to the past events](#add-an-event-to-the-past-events)
-    - [Add a link to the proceedings](#add-a-link-to-the-proceedings)
-    - [Edit the History](#edit-the-history)
-    - [Change the contact person](#change-the-contact-person)
-    - [Change the logo letters or tagline](#change-the-logo-letters-or-tagline)
-  - [3. JSON in two minutes: the rules](#3-json-in-two-minutes-the-rules)
-    - [Check your work before publishing](#check-your-work-before-publishing)
-  - [4. Publishing your change](#4-publishing-your-change)
-  - [5. If something goes wrong](#5-if-something-goes-wrong)
-  - [6. Preview on your computer (optional)](#6-preview-on-your-computer-optional)
-  - [7. First-time setup: deploy to Cloudflare Pages](#7-first-time-setup-deploy-to-cloudflare-pages)
-  - [8. Connect the domain name](#8-connect-the-domain-name)
-  - [9. Yearly tasks and who holds the logins](#9-yearly-tasks-and-who-holds-the-logins)
-  - [10. Replacing the hero photo](#10-replacing-the-hero-photo)
-  - [11. For developers and AI tools](#11-for-developers-and-ai-tools)
+1. [Where things are](#1-where-things-are)
+2. [How to edit the content](#2-how-to-edit-the-content) (members, events, history, contact, tagline)
+3. [JSON in two minutes: the rules](#3-json-in-two-minutes-the-rules)
+4. [Publishing your change](#4-publishing-your-change)
+5. [If something goes wrong](#5-if-something-goes-wrong)
+6. [Preview on your computer (optional)](#6-preview-on-your-computer-optional)
+7. [First-time setup: deploy to Cloudflare Pages](#7-first-time-setup-deploy-to-cloudflare-pages)
+8. [Connect the domain name](#8-connect-the-domain-name)
+9. [Yearly tasks and who holds the logins](#9-yearly-tasks-and-who-holds-the-logins)
+10. [Replacing the hero photo](#10-replacing-the-hero-photo)
+11. [For developers and AI tools](#11-for-developers-and-ai-tools)
 
 ---
 
@@ -50,6 +38,7 @@ site/
   css/style.css      colours, fonts, layout (developers only)
   js/main.js         builds the page from the data files (developers only)
 scripts/check-data.mjs   checks your edits for mistakes
+wrangler.jsonc          tells Cloudflare to publish the "site" folder
 docs/                    background notes and the original text from the old website
 AGENTS.md                instructions for AI tools and developers
 ```
@@ -184,7 +173,7 @@ The website is connected to this GitHub repository. **Saving a change here is pu
 4. Click **Commit changes…** (green button, top right), write a short note like "Add Dr Jane Smith", and click **Commit changes** again.
 5. Wait about one minute, then reload the website.
 
-**To see whether it worked:** open the repository's page on Cloudflare (Workers & Pages, then the project, then **Deployments**). The top entry says **Success** or **Failed**. If it failed, click it to read the checker's message, fix the file, and commit again.
+**To see whether it worked:** open the repository's page on Cloudflare (Workers & Pages, then the project, then **Deployments** or **Builds**). The top entry says **Success** or **Failed**. If it failed, click it to read the checker's message, fix the file, and commit again.
 
 Tip: on a repository page, pressing the `.` (full stop) key opens an editor in the browser that works like Visual Studio Code.
 
@@ -213,30 +202,31 @@ Opening `index.html` by double-clicking it **will not work** (browsers refuse to
 
 ---
 
-## 7. First-time setup: deploy to Cloudflare Pages
+## 7. First-time setup: deploy to Cloudflare
 
-Do this once. Cloudflare Pages is free for a site this size. Screens and button names change from time to time, so treat the names below as a guide.
+Do this once. Hosting a site this size on Cloudflare is free. Screens and button names change from time to time, so treat the names below as a guide.
 
 **You need:** a free Cloudflare account and a free GitHub account (the group should own these, not one person's private email: see section 9).
 
-1. **Put the code on GitHub.** Create a new repository (private is fine) and upload everything in this folder. If you use Visual Studio Code, use *Source Control, Publish to GitHub*.
-2. **Create the Cloudflare project.** In the Cloudflare dashboard go to **Workers & Pages**, choose **Create**, then the **Pages** option, then **Connect to Git**. Authorise GitHub and choose the repository.
-3. **Enter the build settings:**
+1. **Put the code on GitHub.** Create a repository and upload everything in this folder (including `wrangler.jsonc`).
+2. **Create the Cloudflare project.** In the Cloudflare dashboard go to **Workers & Pages**, choose **Create**, then **Import a repository** (connect to Git). Authorise GitHub and choose the repository.
+3. **Enter the settings on the "Set up your application" screen:**
 
    | Setting | Value |
    |---|---|
-   | Production branch | `main` |
-   | Framework preset | `None` |
+   | Project name | `afg` (must match the `name` in `wrangler.jsonc`) |
    | Build command | `node scripts/check-data.mjs` |
-   | Build output directory | `site` |
+   | Deploy command | `npx wrangler deploy` (leave the default) |
+   | Preview command | `npx wrangler preview` (leave the default) |
 
-   The build command is the safety check from section 3: if the data files contain a mistake, the publish stops and the old site stays up.
-4. Click **Save and Deploy**. After a minute or so the site is live at an address ending in `.pages.dev`.
-5. If the build fails with a message about the Node version, open the project's **Settings, Environment variables** and add `NODE_VERSION` with the value `20`, then retry the deployment.
+   The **build command** is the safety check from section 3: if the data files contain a mistake, the build fails, nothing is deployed, and the old site stays online.
+   The file `wrangler.jsonc` tells Cloudflare that the website is the `site` folder.
+4. Click **Deploy**. After a minute or so the site is live at an address ending in `.workers.dev`.
+5. If the build fails with a message about the Node version, open the project's **Settings, Build, Variables** and add `NODE_VERSION` with the value `20`, then retry.
 
-From now on, every change saved to the `main` branch on GitHub is published automatically.
+From now on, every change saved to the `main` branch on GitHub is built, checked and published automatically.
 
-> If Cloudflare's dashboard offers only its newer "Workers" flow for static sites: choose the static assets option, point it at the `site` folder, and keep the same build command. The result is the same.
+> If you ever use Cloudflare *Pages* instead of Workers: set the build command to `node scripts/check-data.mjs` and the build output directory to `site`. Everything else in this guide is the same.
 
 ---
 
@@ -248,7 +238,7 @@ Connect it like this:
 
 1. In the Cloudflare dashboard, **Add a site** (the free plan is fine) and enter the domain name.
 2. Cloudflare shows two **nameservers**. At your registrar, find the domain's **nameserver / DNS** settings and replace the existing nameservers with Cloudflare's two. (This can take from a few minutes to a few hours.)
-3. In the Pages project, open **Custom domains**, click **Set up a custom domain**, and enter the domain (and `www.` version if you want both). Cloudflare sets up the DNS records and the free HTTPS certificate for you.
+3. Open the project (Workers & Pages, then `afg`), go to **Settings, Domains & Routes**, choose **Add, Custom domain**, and enter the domain (and the `www.` version if you want both). Cloudflare sets up the DNS records and the free HTTPS certificate for you.
 
 If your registrar does not allow changing nameservers, ask the registrar for help, or use a registrar that does.
 
@@ -292,7 +282,3 @@ The large picture at the top is `site/assets/hero.jpg`.
 - [`docs/original-content/`](docs/original-content/) holds the text transcribed from the old website, for reference only. The live content is in `site/data/`.
 - There is deliberately **no framework and no build step**: plain HTML, CSS and JavaScript.
 - Fonts (Cormorant Garamond and Inter) load from Google Fonts. If they fail to load, the page falls back to system fonts and stays readable.
-
-
-
-Photo credits:  hero image from https://www.researchgate.net/figure/Top-view-of-scanning-electron-micrograph-of-fracture-surface-of-tungsten-plate-material_fig5_304192019

@@ -1,0 +1,9 @@
+{
+  // Tells Cloudflare to publish the "site" folder as a static website.
+  // "name" must match the project name in the Cloudflare dashboard.
+  "name": "afg",
+  "compatibility_date": "2026-11-08",
+  "assets": {
+    "directory": "./site"
+  }
+}
