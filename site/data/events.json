@@ -1,0 +1,150 @@
+{
+  "upcoming": [
+    {
+      "title": "Next AFG Conference",
+      "when": "2027",
+      "venue": "Sydney",
+      "details": "More information to come.",
+      "date": "",
+      "link": "",
+      "linkText": ""
+    }
+  ],
+  "past": [
+    {
+      "name": "Australian Fracture Group Meetings",
+      "events": [
+        {
+          "year": "1974",
+          "venue": "Melbourne",
+          "chairs": "Dr Bob Leicester & Dr Maurice de Morton"
+        },
+        {
+          "year": "1977",
+          "venue": "Melbourne",
+          "chairs": "Dr Neil Ryan"
+        },
+        {
+          "year": "1980",
+          "venue": "Melbourne",
+          "chairs": "Dr Neil Ryan"
+        },
+        {
+          "year": "1982",
+          "venue": "Melbourne",
+          "chairs": "Prof George Sih, Dr Neil Ryan & Dr Rhys Jones"
+        },
+        {
+          "year": "1985",
+          "venue": "Sydney",
+          "chairs": "Prof Bhushan Karihaloo"
+        },
+        {
+          "year": "1987",
+          "venue": "Sydney",
+          "chairs": "Prof Yiu-Wing Mai"
+        },
+        {
+          "year": "1988",
+          "venue": "Melbourne",
+          "chairs": "Dr Neil Ryan"
+        },
+        {
+          "year": "1990",
+          "venue": "Sydney",
+          "chairs": "Prof Yiu-Wing Mai"
+        },
+        {
+          "year": "1993",
+          "venue": "Melbourne",
+          "chairs": "Dr Manfred Heller"
+        },
+        {
+          "year": "1994",
+          "venue": "Canberra",
+          "chairs": "Dr Arjen Romeyn"
+        },
+        {
+          "year": "1996",
+          "venue": "Melbourne",
+          "chairs": "Prof John Williams & Dr Yee Cheong Lam"
+        },
+        {
+          "year": "1997",
+          "venue": "Sydney",
+          "chairs": "Prof Bhushan Karihaloo & Prof Yiu-Wing Mai",
+          "award": "Alan Head"
+        }
+      ]
+    },
+    {
+      "name": "Structural Integrity and Fracture (SIF) Conferences",
+      "events": [
+        {
+          "year": "1998",
+          "venue": "Melbourne",
+          "chairs": "Dr Chun Wang",
+          "award": "Alan Baker"
+        },
+        {
+          "year": "2000",
+          "venue": "Sydney",
+          "chairs": "Dr Greg Heness",
+          "award": "Yiu-Wing Mai"
+        },
+        {
+          "year": "2002",
+          "venue": "Perth",
+          "chairs": "Prof Arcady Dyskin"
+        },
+        {
+          "year": "2004",
+          "venue": "Brisbane",
+          "chairs": "Dr John Griffiths",
+          "award": "Brian Lawn"
+        },
+        {
+          "year": "2006",
+          "venue": "Sydney",
+          "chairs": "Prof Mark Hoffman"
+        },
+        {
+          "year": "2008",
+          "venue": "Perth",
+          "chairs": "Prof Xiaozhi Hu",
+          "award": "John Griffiths"
+        },
+        {
+          "year": "2010",
+          "venue": "Auckland",
+          "chairs": "Prof George Ferguson & Dr Ashvin Thambayah"
+        },
+        {
+          "year": "2013",
+          "venue": "Melbourne",
+          "chairs": "Prof Chun Wang"
+        },
+        {
+          "year": "2014",
+          "venue": "Sydney",
+          "chairs": "Prof Lin Ye & A/Prof Andrei Kotousov"
+        },
+        {
+          "year": "2016",
+          "venue": "Adelaide",
+          "chairs": "A/Prof Andrei Kotousov & A/Prof Jun Ma"
+        }
+      ]
+    }
+  ],
+  "proceedings": [
+    {
+      "label": "SIF 10, Adelaide 2016: Conference Program (PDF)",
+      "url": ""
+    },
+    {
+      "label": "SIF 9, Sydney 2014: Proceedings (Elsevier)",
+      "url": "http://store.elsevier.com/Recent-Advances-in-Structural-Integrity-Analysis-Proceedings-of-the-International-Congress-APCF-SIF-2014/Lin-Ye/isbn-9780081002032/"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "afg-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static website for the Australian Fracture Group. Content lives in site/data/*.json",
+  "scripts": {
+    "check": "node scripts/check-data.mjs",
+    "start": "npx --yes serve site"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

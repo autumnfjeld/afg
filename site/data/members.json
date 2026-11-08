@@ -1,0 +1,297 @@
+{
+  "committee": [
+    {
+      "role": "Current President",
+      "people": [
+        {
+          "name": "Prof Elena Pasternak",
+          "affiliation": "University of Western Australia"
+        }
+      ]
+    },
+    {
+      "role": "Vice-Presidents",
+      "people": [
+        {
+          "name": "A/Prof Wenyi Yan",
+          "affiliation": "Monash University"
+        }
+      ]
+    },
+    {
+      "role": "Treasurer",
+      "people": [
+        {
+          "name": "Prof Mark Hoffman",
+          "affiliation": "The University of New South Wales"
+        }
+      ]
+    },
+    {
+      "role": "Deputy Treasurer",
+      "people": [
+        {
+          "name": "Dr Chris Wallbrink",
+          "affiliation": "DSTG Melbourne"
+        }
+      ]
+    },
+    {
+      "role": "Nomination Chair",
+      "people": [
+        {
+          "name": "Prof Andrei Kotousov",
+          "affiliation": "The University of Adelaide"
+        }
+      ]
+    },
+    {
+      "role": "Committee Members",
+      "people": [
+        {
+          "name": "Dr Yixiang Gan",
+          "affiliation": "The University of Sydney"
+        },
+        {
+          "name": "A/Prof Ling Yin",
+          "affiliation": "James Cook University"
+        },
+        {
+          "name": "A/Prof Giang Nguyen",
+          "affiliation": "The University of Adelaide"
+        }
+      ]
+    },
+    {
+      "role": "Senior Members",
+      "people": [
+        {
+          "name": "Prof Yiu-Wing Mai",
+          "affiliation": "The University of Sydney"
+        },
+        {
+          "name": "Dr John Griffiths",
+          "affiliation": "CSIRO"
+        },
+        {
+          "name": "Dr Francis Rose",
+          "affiliation": "DSTG"
+        }
+      ]
+    }
+  ],
+  "groupMembers": [
+    {
+      "name": "Dr Md Arifuzzaman",
+      "affiliation": "The University of Newcastle"
+    },
+    {
+      "name": "Dr Philip Bendeich",
+      "affiliation": "ANSTO"
+    },
+    {
+      "name": "A/Prof Yu Bai",
+      "affiliation": "Monash University"
+    },
+    {
+      "name": "Mrs Madeleine Burchill",
+      "affiliation": "DSTG"
+    },
+    {
+      "name": "Prof Chiu Chiu",
+      "affiliation": "Monash University"
+    },
+    {
+      "name": "Dr David Carr",
+      "affiliation": "ANSTO"
+    },
+    {
+      "name": "Dr Daniel Dias-Da-Costa",
+      "affiliation": "The University of Sydney"
+    },
+    {
+      "name": "Prof Arcady Dyskin",
+      "affiliation": "University of Western Australia"
+    },
+    {
+      "name": "Dr Drew Donnelly",
+      "affiliation": "DSTG"
+    },
+    {
+      "name": "A/Prof Raj Das",
+      "affiliation": "RMIT University"
+    },
+    {
+      "name": "A/Prof Kai Duan",
+      "affiliation": "Central Queensland University"
+    },
+    {
+      "name": "Dr Kunkun Fu",
+      "affiliation": "The University of Sydney"
+    },
+    {
+      "name": "Dr Yixiang Gan",
+      "affiliation": "The University of Sydney"
+    },
+    {
+      "name": "Dr Kazem Ghabraie",
+      "affiliation": "Deakin University"
+    },
+    {
+      "name": "Prof Bernd Gludovatz",
+      "affiliation": "The University of New South Wales"
+    },
+    {
+      "name": "Dr Richard Clegg",
+      "affiliation": "Explicom Pty Ltd."
+    },
+    {
+      "name": "Dr Weiping Hu",
+      "affiliation": "DSTG"
+    },
+    {
+      "name": "Prof Mark Hoffman",
+      "affiliation": "University of New South Wales"
+    },
+    {
+      "name": "Dr Zhuang He",
+      "affiliation": "The University of Adelaide"
+    },
+    {
+      "name": "Dr Sherif Gouda Ismail",
+      "affiliation": "University of South Australia"
+    },
+    {
+      "name": "Prof Andrei Kotousov",
+      "affiliation": "The University of Adelaide"
+    },
+    {
+      "name": "Dr Hassan Karampour",
+      "affiliation": "Griffith University"
+    },
+    {
+      "name": "Dr Aditya Khanna",
+      "affiliation": "The University of Adelaide"
+    },
+    {
+      "name": "Prof Jamie J. Kruzic",
+      "affiliation": "The University of New South Wales"
+    },
+    {
+      "name": "A/Prof Ali Karrech",
+      "affiliation": "University of Western Australia"
+    },
+    {
+      "name": "Dr Jun Li",
+      "affiliation": "Curtin University"
+    },
+    {
+      "name": "Dr Hong-Yuan Liu",
+      "affiliation": "The University of Sydney"
+    },
+    {
+      "name": "A/Prof Jun Ma",
+      "affiliation": "University of South Australia"
+    },
+    {
+      "name": "Mr Munawwar Mohabut",
+      "affiliation": "The University of Adelaide"
+    },
+    {
+      "name": "Dr Manfred Heller",
+      "affiliation": "DSTG"
+    },
+    {
+      "name": "Dr Ondrej Muransky",
+      "affiliation": "ANSTO"
+    },
+    {
+      "name": "A/Prof Giang Nguyen",
+      "affiliation": "The University of Adelaide"
+    },
+    {
+      "name": "A/Prof Alex Ng",
+      "affiliation": "The University of Adelaide"
+    },
+    {
+      "name": "Prof Elena Pasternak",
+      "affiliation": "University of Western Australia"
+    },
+    {
+      "name": "Dr Anna Paradowska",
+      "affiliation": "ANSTO"
+    },
+    {
+      "name": "Dr Xiaoyuan Pei",
+      "affiliation": "Tianjin Polytechnic University, China"
+    },
+    {
+      "name": "Dr Sophie Primig",
+      "affiliation": "The University of New South Wales"
+    },
+    {
+      "name": "A/Prof Luming Shen",
+      "affiliation": "The University of Sydney"
+    },
+    {
+      "name": "Prof Hoon Sohn",
+      "affiliation": "KAIST, Republic of Korea"
+    },
+    {
+      "name": "Dr Youhong Tang",
+      "affiliation": "Flinders University"
+    },
+    {
+      "name": "Prof Kiet Tieu",
+      "affiliation": "University of Wollongong"
+    },
+    {
+      "name": "Dr Ribelito Torregosa",
+      "affiliation": "DSTG"
+    },
+    {
+      "name": "Dr Abbas Taheri",
+      "affiliation": "The University of Adelaide"
+    },
+    {
+      "name": "A/Prof Martin Veidt",
+      "affiliation": "The University of Queensland"
+    },
+    {
+      "name": "Dr Chris Wallbrink",
+      "affiliation": "DSTG"
+    },
+    {
+      "name": "Prof Chun Wang",
+      "affiliation": "The University of New South Wales"
+    },
+    {
+      "name": "Dr Richard Yang",
+      "affiliation": "Western Sydney University"
+    },
+    {
+      "name": "Dr Xiaobo Yu",
+      "affiliation": "DSTG"
+    },
+    {
+      "name": "A/Prof Wenyi Yan",
+      "affiliation": "Monash University"
+    },
+    {
+      "name": "Prof Lin Ye",
+      "affiliation": "The University of Sydney"
+    },
+    {
+      "name": "A/Prof Ling Yin",
+      "affiliation": "James Cook University"
+    },
+    {
+      "name": "Dr Yingyan Zhang",
+      "affiliation": "Western Sydney University"
+    },
+    {
+      "name": "Dr Zhiheng Zhao",
+      "affiliation": "University of South Australia"
+    }
+  ]
+}
